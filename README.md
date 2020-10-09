@@ -1,5 +1,6 @@
 ### Example react project with...
 - [X] react 
+- [X] react-router
 - [X] redux 
 - [X] redux-saga
 - [X] immer

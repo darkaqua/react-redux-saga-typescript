@@ -21,6 +21,7 @@
     "noUnusedLocals": true
   },
   "include": [
+    "./node_modules/react-router-dom",
     "./node_modules/@redux-saga",
     "./src"
   ]
