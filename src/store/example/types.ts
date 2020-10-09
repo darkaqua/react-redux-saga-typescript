@@ -1,12 +1,27 @@
-import * as actions from "./actions";
 
+import {IExampleAction, IExampleActionSuccess} from "./actions";
 
+/** Action Types **/
 export enum ExampleActionTypes {
-    SET_TEST = '@@example/SET_TEST'
+    EXAMPLE = 'EXAMPLE@@EXAMPLE',
+    EXAMPLE_SUCCESS = 'EXAMPLE@@EXAMPLE_SUCCESS',
 }
 
-export type ExampleActions = actions.SetTest;
+/** Action List **/
+export type ExampleActions =
+    | IExampleAction
+    | IExampleActionSuccess
 
+
+/** Default State Values **/
+export const exampleDefaultState = (): ExampleState => ({
+    example: 0
+});
+
+/** State **/
 export interface ExampleState {
-    test: any;
+    example: number;
 }
+
+/** Interfaces **/
+//...

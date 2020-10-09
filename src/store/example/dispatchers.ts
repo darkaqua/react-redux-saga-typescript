@@ -1,7 +1,15 @@
-import * as Actions from "./actions";
-import {ExampleActionTypes} from "./types";
 
-export const SetTest = (message: string): Actions.SetTest => ({
-    type: ExampleActionTypes.SET_TEST,
-    test: message
-})
+import {ExampleActionTypes} from "./types";
+import {IExampleAction, IExampleActionSuccess} from "./actions";
+
+/** Actions **/
+export const exampleDispatchAction = (num: number): IExampleAction => ({
+    type: ExampleActionTypes.EXAMPLE,
+    example: num
+});
+
+/** Saga Actions **/
+export const exampleDispatchActionSuccess = (num: number): IExampleActionSuccess => ({
+    type: ExampleActionTypes.EXAMPLE_SUCCESS,
+    example: num
+});

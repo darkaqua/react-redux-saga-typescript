@@ -5,7 +5,7 @@ type Props = {
     onClick: () => void;
 }
 
-const Button: React.FunctionComponent<Props> =
+export const Button: React.FunctionComponent<Props> =
 ({
     onClick,
     children
@@ -14,6 +14,4 @@ const Button: React.FunctionComponent<Props> =
         className={style.button}
         onClick={onClick}
     >{children}</button>
-)
-
-export default Button;
+);

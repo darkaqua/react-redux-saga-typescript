@@ -1,23 +1,16 @@
 import {Reducer} from 'redux'
-import {ExampleState, ExampleActionTypes, ExampleActions} from "./types";
+import {ExampleState, ExampleActionTypes, ExampleActions, exampleDefaultState} from "./types";
 import {produce} from 'immer'
 
-export const initialState: ExampleState = {
-    test: 'test'
-}
-
-const reducer: Reducer<ExampleState, ExampleActions> = (
-    state = initialState,
+export const exampleReducer: Reducer<ExampleState, ExampleActions> = (
+    state = exampleDefaultState(),
     action: ExampleActions
 ) => {
     switch (action.type) {
-        case ExampleActionTypes.SET_TEST:
+        case ExampleActionTypes.EXAMPLE_SUCCESS:
             return produce(state, (copyState: ExampleState) => {
-                copyState.test = action.test;
+                copyState.example = action.example;
             });
-        default:
-            return state
     }
+    return state
 }
-
-export { reducer as exampleReducer }
