@@ -1,6 +1,6 @@
 import {Reducer} from 'redux'
-import {ExampleState, ExampleActionTypes, ExampleActions, exampleDefaultState} from "./types";
 import {produce} from 'immer'
+import {ExampleState, ExampleActionTypes, ExampleActions, exampleDefaultState} from "./types";
 
 export const exampleReducer: Reducer<ExampleState, ExampleActions> = (
     state = exampleDefaultState(),
